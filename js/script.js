@@ -6,7 +6,7 @@
 
 "use strict"
 
-// This function displays a greeting based on the hour of the day
+// This function displays a statement to see whether or not you guessed the program's correct randomly generated number 
  
 function displayGreeting () {
   // declare constants
@@ -15,19 +15,18 @@ function displayGreeting () {
 
   let correct = Math.floor((Math.random()*MAX)+MIN);
   
-	// get user input
+	// get user input (number 1-6 from user)
 	let number = parseInt(document.getElementById('number').value)
 
-  // determine the greeting based on the hour of the day in 24-hour format
+  // if statements, if number is correct, display a message that tells them so, if number is incorrect, display a message that tells them so 
 	if (number == correct) {
-		let greeting = "You are right, that was the number I chose!"
+		let greeting = "You are right, that is the correct random number"
     document.getElementById('greeting').innerHTML = greeting
 	}
 
   else {
     let greeting = "Nope, wrong number. Try again."
-    document.getElementById('greeting').innerHTML = greeting
+    document.getElementById('greeting').innerHTML = greeting + " The correct Number is " + correct + "."
   }
-
 }
 
